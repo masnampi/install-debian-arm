@@ -22,7 +22,7 @@ export DISPLAY=:1
 export PULSE_SERVER=127.0.0.1
 rm -rf /run/dbus/dbus.pid
 dbus-launch startxfce4" > /usr/local/bin/vncstart
-echo "vncserver -geometry 1800x2880 -name remote-desktop :1" > /usr/local/bin/vncstart
+echo "vncserver -geometry 2880x1800 -name remote-desktop :1" > /usr/local/bin/vncstart
 echo "vncserver -kill :*" > /usr/local/bin/vncstop
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/*
@@ -56,4 +56,5 @@ echo "adding user . . ."
 echo ""
 adduser anonymous
 usermod -aG sudo anonymous
+echo 'anonymous ALL=(ALL:ALL) ALL' >> /etc/sudoers
 su - anonymous
