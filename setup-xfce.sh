@@ -10,13 +10,6 @@ apt-get install tigervnc-standalone-server dbus-x11 -y
 apt-get --fix-broken install
 apt-get clean
 
-echo ""
-echo "adding user . . ."
-echo ""
-adduser anonymous
-usermod -aG sudo anonymous
-su - anonymous
-
 #Setup the necessary files
 mkdir -p ~/.vnc
 echo "#!/bin/bash
@@ -34,7 +27,7 @@ echo "vncserver -kill :*" > /usr/local/bin/vncstop
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/*
 clear
-wget https://raw.githubusercontent.com/masnampi/install-debian-arm/main/passwd -P .vnc/
+wget https://raw.githubusercontent.com/masnampi/install-debianarm/main/passwd -P .vnc/
 
 echo ""
 echo "installing firefox esr . . ."
@@ -48,11 +41,19 @@ pkill -f firefox
 vncstop
 sleep 2
 
-wget -O $(find ~/.mozilla/firefox -name *.default-esr)/user.js https://raw.githubusercontent.com/masnampi/install-debian-arm/main/user.js
+wget -O $(find ~/.mozilla/firefox -name *.default-esr)/user.js https://raw.githubusercontent.com/masnampi/install-debianarm/main/user.js
 
 rm .vnc/passwd
    clear
    echo "use vnc command :"
    echo "   - vncstart"
    echo "   - vncstop"
-rm de-xfce.sh
+
+rm setup-xfce.sh
+
+echo ""
+echo "adding user . . ."
+echo ""
+adduser anonymous
+usermod -aG sudo anonymous
+su - anonymous
