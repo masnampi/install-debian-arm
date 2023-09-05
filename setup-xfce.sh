@@ -51,10 +51,10 @@ rm .vnc/passwd
 
 rm setup-xfce.sh
 
-echo ""
-echo "adding user . . ."
-echo ""
-adduser anonymous
-usermod -aG sudo anonymous
-echo 'anonymous ALL=(ALL:ALL) ALL' >> /etc/sudoers
-su - anonymous
+#echo ""
+#echo "adding user . . ."
+#echo ""
+#adduser anonymous
+#usermod -aG sudo anonymous
+#echo 'anonymous ALL=(ALL:ALL) ALL' >> /etc/sudoers
+#su - anonymous
