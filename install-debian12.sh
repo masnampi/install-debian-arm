@@ -103,4 +103,4 @@ bash $linux
    echo ""
    echo "type debian to start Debian !"
    echo ""
-rm debian12.sh
+rm install-debian12.sh
