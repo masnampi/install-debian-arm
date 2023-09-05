@@ -9,10 +9,10 @@ pkg update && pkg upgrade -y
 
 **step 1, run on termux :**
 ```
-pkg install wget -y ; wget https://raw.githubusercontent.com/wahasa/Debian/main/install-debian12.sh ; chmod +x install-debian12.sh ; ./install-debian12.sh
+pkg install wget -y ; wget https://raw.githubusercontent.com/masnampi/install-debian-arm/main/install-debian12.sh ; chmod +x install-debian12.sh ; ./install-debian12.sh
 ```
 
 **step 2, run inside debian :**
 ```
-apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Debian/main/Desktop/setup-xfce.sh ; chmod +x setup-xfce.sh ; ./setup-xfce.sh
+apt install wget -y ; wget https://raw.githubusercontent.com/masnampi/install-debian-arm/main/setup-xfce.sh ; chmod +x setup-xfce.sh ; ./setup-xfce.sh
 ```
