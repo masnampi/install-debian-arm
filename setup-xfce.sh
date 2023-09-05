@@ -34,7 +34,7 @@ echo "vncserver -kill :*" > /usr/local/bin/vncstop
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/*
 clear
-wget https://raw.githubusercontent.com/masnampi/install-debianarm/main/passwd -P .vnc/
+wget https://raw.githubusercontent.com/masnampi/install-debian-arm/main/passwd -P .vnc/
 
 echo ""
 echo "installing firefox esr . . ."
@@ -48,7 +48,7 @@ pkill -f firefox
 vncstop
 sleep 2
 
-wget -O $(find ~/.mozilla/firefox -name *.default-esr)/user.js https://raw.githubusercontent.com/masnampi/install-debianarm/main/user.js
+wget -O $(find ~/.mozilla/firefox -name *.default-esr)/user.js https://raw.githubusercontent.com/masnampi/install-debian-arm/main/user.js
 
 rm .vnc/passwd
    clear
